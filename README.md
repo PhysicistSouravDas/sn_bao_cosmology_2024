@@ -39,17 +39,13 @@ This project uses two datasets:
    - **$D_H/r_s$:** The Hubble distance $D_H(z)$, normalized by $r_s$.
    - **$D_V/r_s$:** The angle-averaged distance that quantifies the average of the distances measured along and perpendicular to the line of sight:
      
-     $$
-     D_V(z) = \left(z \, D_M(z)^2 \, D_H(z)\right)^{1/3}
-     $$
-     
-     normalized by $r_s$.
+      $$D_V(z) = \left(z \, D_M(z)^2 \, D_H(z)\right)^{1/3}$$
+      
+      normalized by $r_s$.
 
    The angular diameter distance $D_A$ is related to $D_M$ by:
    
-   $$
-   D_M = (1+z)D_A
-   $$
+   $$D_M = (1+z)D_A$$
    
    Use this relation to compute $D_A$ from the provided $D_M$ values and their covariance matrix. (Note that the dataset does not include values for $r_s$, but it cancels out if you take ratios of $D_M/r_s$ at different redshifts).
 
@@ -75,9 +71,7 @@ You can also download all the files as zip by [clicking here](https://github.com
 
    The distance modulus is defined as
 
-   $$
-   \mu = m - M = 5\log_{10}{\left(D_L \text{ (in pc)}\right)} - 5
-   $$
+   $$\mu = m - M = 5\log_{10}{\left(D_L \text{ (in pc)}\right)} - 5$$
    
    where:
    - $m$ is the apparent magnitude.
@@ -87,15 +81,11 @@ You can also download all the files as zip by [clicking here](https://github.com
    **Likelihood Definition:**  
    Assume a Gaussian likelihood. Define the log likelihood function as:
 
-   $$
-   \chi^2 = \mathbf{r}^{\dagger} \, C^{-1} \, \mathbf{r}
-   $$
+   $$\chi^2 = \mathbf{r}^{\dagger} \, C^{-1} \, \mathbf{r}$$
    
    with:
    
-   $$
-   \mathbf{r} = y_{\text{obs}} - y_{\text{model}}
-   $$
+   $$\mathbf{r} = y_{\text{obs}} - y_{\text{model}}$$
    
    Here, $C$ is the covariance matrix and the dagger ($\dagger$) denotes the transpose of the residual vector $\mathbf{r}$.
 
